@@ -1,0 +1,7 @@
+# https://dart.dev/guides/libraries/private-files
+# Created by `dart pub`
+.dart_tool/
+
+# Ignore specific files in bin folder
+bin/task4_v1.dart
+bin/task5_v2.dart

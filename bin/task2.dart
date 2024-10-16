@@ -4,9 +4,11 @@ import 'dart:io';
 void main() {
   var random = Random();
   int randomNumber = random.nextInt(100) + 1;
-  // print(randomNumber);
+  int count = 0;
+  print(randomNumber);
 
   while(true) {
+    count++;
     print('Enter the integer number from 1 to 100 (or "exit" to leave):');
     final inputNumber = stdin.readLineSync();
 
@@ -24,8 +26,9 @@ void main() {
     }
 
     if (number == randomNumber) {
-        print('Congratulations, you have guessed the number!'
+        print('Congratulations, you have guessed the number in \'$count\' tries!'
             '\nGame over!');
+        count = 0;
         break;
       } 
     

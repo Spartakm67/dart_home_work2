@@ -17,10 +17,10 @@ void main() {
     double? fahrenheitNumber = double.tryParse(fahrenheitInput!);
 
     if (celsiusInput.isNotEmpty && celsiusNumber != null) {
-      double fahrenheit = celsiusToFahrenheit(celsiusNumber);
+      final fahrenheit = celsiusToFahrenheit(celsiusNumber);
       print('$celsiusNumber°C = ${fahrenheit.toStringAsFixed(2)}°F');
     } else if (fahrenheitInput.isNotEmpty && fahrenheitNumber != null) {
-      double celsius = fahrenheitToCelsius(fahrenheitNumber);
+      final celsius = fahrenheitToCelsius(fahrenheitNumber);
       print('$fahrenheitNumber°F = ${celsius.toStringAsFixed(2)}°C');
     } else {
       print('Please enter a valid number for either Celsius or Fahrenheit!');

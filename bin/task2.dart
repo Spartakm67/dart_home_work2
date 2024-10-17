@@ -2,10 +2,10 @@ import 'dart:math';
 import 'dart:io';
 
 void main() {
-  var random = Random();
-  int randomNumber = random.nextInt(100) + 1;
+  final random = Random();
+  final randomNumber = random.nextInt(100) + 1;
   int count = 0;
-  print(randomNumber);
+  print(randomNumber); //Comment after debugging
 
   while(true) {
     count++;
@@ -30,23 +30,19 @@ void main() {
             '\nGame over!');
         count = 0;
         break;
-      } 
-    
-    // while (number != randomNumber) {
-      if (number > 100 || number < 1) {
+      }
+
+    if (number > 100 || number < 1) {
         print('The number must be between 1 and 100!');
-        // break;
         continue;
       }
-      if (number > randomNumber) {
+
+    if (number > randomNumber) {
         print('Your number is more than required!');
-        // break;
-      } else {
+        } else {
         print('Your number is less than required!');
-        // break;
         }
-    //}
-  }
+    }
   print('Exit the program');
 }
 

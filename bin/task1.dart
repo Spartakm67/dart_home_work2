@@ -11,12 +11,19 @@ void main() {
       print('Data can not be empty!');
       continue;
     }
-    num? number = double.tryParse(inputNumber);
+        num? number = double.tryParse(inputNumber);
 
-    if (number == null) {
+       if (number == null) {
       print('It\'s not a number!');
       continue;
     }
+
+    if (number < 0 || number > 100) {
+      print('You entered not a valid number! '
+          'Required number is in the range of 1 to 100');
+      continue;
+    }
+
     else {
       if (number >= 90) print('Grade A');
       if (number >= 80 && number <= 89) print('Grade B');

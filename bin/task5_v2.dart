@@ -7,11 +7,11 @@ import 'dart:io';
 void main() {
   while (true) {
     print('Enter the first number (or "exit" to leave):');
-    double? firstNumber = readNumber();
+    final firstNumber = readNumber();
     if (firstNumber == null) break;
 
     print('Enter the second number (or "exit" to leave):');
-    double? secondNumber = readNumber();
+    final secondNumber = readNumber();
     if (secondNumber == null) break;
 
     String? action = readOperation();
@@ -61,7 +61,7 @@ double? readNumber() {
     final input = stdin.readLineSync();
     if (input?.toLowerCase() == 'exit') return null;
 
-    double? number = double.tryParse(input!);
+    final number = double.tryParse(input!);
     if (number != null) {
       return number;
     } else {
@@ -74,7 +74,7 @@ double? readNumber() {
 String? readOperation() {
   while (true) {
     print('Enter an operation (+, -, *, /):');
-    String? action = stdin.readLineSync();
+    final action = stdin.readLineSync();
     if (action?.toLowerCase() == 'exit') return null;
 
     if ({'+', '-', '*', '/'}.lookup(action) != null) {

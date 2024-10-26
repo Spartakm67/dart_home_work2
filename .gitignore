@@ -4,4 +4,3 @@
 
 # Ignore specific files in bin folder
 bin/task4_v1.dart
-bin/leap_year.dart
